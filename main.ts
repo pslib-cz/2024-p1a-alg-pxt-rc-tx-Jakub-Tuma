@@ -1,4 +1,4 @@
-radio.setGroup(75)
+radio.setGroup(54)
 
 basic.forever(function () {
     let x = input.acceleration(Dimension.X)
