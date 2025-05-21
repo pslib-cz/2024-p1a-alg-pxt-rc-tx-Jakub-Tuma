@@ -1,21 +1,19 @@
-radio.setGroup(173);
-radio.setTransmitPower(7)
-let go = true
-
-input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    go = !go
-    if (go) {
-        basic.showIcon(IconNames.Yes)
-    } else {
-        basic.showIcon(IconNames.No)
-    }
-})
+radio.setGroup(75)
 
 basic.forever(function () {
-    let x = Math.round(input.acceleration(Dimension.X));
-    let y = Math.round(input.acceleration(Dimension.Y));
+    let x = input.acceleration(Dimension.X)
+    let y = input.acceleration(Dimension.Y)
 
-    console.log(`X: ${x}, Y: ${y}`);
+    radio.sendString(`${x},${y}`)
 
-    radio.sendValue("SpeedX", x) && radio.sendValue("SpeedY", y);
-});
+    basic.pause(100)
+})
+
+input.onButtonPressed(Button.A, function () {
+    radio.sendString("Stop")
+})
+
+input.onButtonPressed(Button.B, function () {
+    basic.showIcon(IconNames.Heart)
+
+})
