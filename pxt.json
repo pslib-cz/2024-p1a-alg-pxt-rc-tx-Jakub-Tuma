@@ -1,11 +1,12 @@
 {
-    "name": "2024-p1a-alg-pxt-rc-tx-jakub-tuma - Copy",
+    "name": "2024-p1a-alg-pxt-rc-tx-jakub-tuma - Copy - Copy",
     "version": "0.0.0",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "2024-p1a-alg-pxt-rc-tx-jakub-tuma - Copy": "github:pslib-cz/2024-p1a-alg-pxt-rc-tx-Jakub-Tuma#18deb1ffe466faf44461f9f2097deb73be03aa89"
     },
     "files": [
         "README.md",
