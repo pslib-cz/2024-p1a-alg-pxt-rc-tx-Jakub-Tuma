@@ -11,12 +11,10 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
         basic.showIcon(IconNames.No)
         radio.sendString("Stop")
     }
-
+})
 basic.forever(function () {
-    const ab = Math.round(input.acceleration(Dimension.X)); + Math.round(input.acceleration(Dimension.Y));
-
-    console.log(`${ab}`)
-
-    radio.sendString(`${ab}`)
-    basic.pause(100)
-})})
+    const xy = Math.round(input.acceleration(Dimension.X)); + Math.round(input.acceleration(Dimension.Y));
+    console.log(`${xy}`)
+    radio.sendString(`${xy}`)
+    basic.pause(60)
+    })
