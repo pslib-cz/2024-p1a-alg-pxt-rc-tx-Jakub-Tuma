@@ -13,7 +13,7 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     }
 })
 basic.forever(function () {
-    const xy = Math.round(input.acceleration(Dimension.X)); + Math.round(input.acceleration(Dimension.Y));
+    const xy = Math.round(input.acceleration(Dimension.X)) + Math.round(input.acceleration(Dimension.Y));
     console.log(`${xy}`)
     radio.sendString(`${xy}`)
     basic.pause(60)
