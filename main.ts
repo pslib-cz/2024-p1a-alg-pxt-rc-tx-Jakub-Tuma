@@ -13,8 +13,10 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     }
 })
 basic.forever(function () {
-    const xy = Math.round(input.acceleration(Dimension.X)) + Math.round(input.acceleration(Dimension.Y));
-    console.log(`${xy}`)
-    radio.sendString(`${xy}`)
+    const x = Math.round(input.acceleration(Dimension.X));
+    const y = Math.round(input.acceleration(Dimension.Y));
+    console.log(`${x, y}`)
+    radio.sendString(`${x, y}`)
     basic.pause(60)
-    })
+})
+
