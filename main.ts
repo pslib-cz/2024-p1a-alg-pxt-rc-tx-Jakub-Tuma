@@ -2,6 +2,7 @@ radio.setGroup(54)
 radio.setTransmitPower(7)
 radio.setFrequencyBand(4)
 radio.setTransmitSerialNumber(true)
+const s = 1569162800
 let go = true
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     go = !go
@@ -16,7 +17,7 @@ basic.forever(function () {
     const x = Math.round(input.acceleration(Dimension.X));
     const y = Math.round(input.acceleration(Dimension.Y));
     console.log(`${x, y}`)
-    radio.sendString(`${x, y}`)
+    radio.sendString(`${x, y, s}`)
     basic.pause(60)
 })
 
