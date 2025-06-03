@@ -7,6 +7,7 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     go = !go
     if (go) {
         basic.showIcon(IconNames.Yes)
+        radio.sendString("Go")
     } else {
         basic.showIcon(IconNames.No)
         radio.sendString("Stop")
